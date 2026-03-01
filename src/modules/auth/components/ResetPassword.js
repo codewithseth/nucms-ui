@@ -1,6 +1,6 @@
 import { Button } from "flowbite-react";
 import { Form, Formik } from "formik";
-import React, { useState } from "react";
+import { useState } from "react";
 import * as Yup from "yup";
 import { ReactComponent as Loading } from "../../../_timouy/assets/svg/loading.svg";
 import logo from "../../../_timouy/assets/svg/logo.svg";
