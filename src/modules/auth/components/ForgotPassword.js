@@ -1,11 +1,11 @@
 import { Button } from "flowbite-react";
 import { Form, Formik } from "formik";
-import React, { useState } from "react";
+import { useState } from "react";
 import * as Yup from "yup";
 import { ReactComponent as Loading } from "../../../_timouy/assets/svg/loading.svg";
 import InputForm from "../../../_timouy/helpers/form/InputForm";
 import logo from "../../../_timouy/assets/svg/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../_timouy/assets/svg/auth.svg";
 import { reqForgotPassword } from "../core/request";
 import { toast } from "sonner";
@@ -14,6 +14,7 @@ const ForgotPassword = () => {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const navigate = useNavigate();
 
   const initialValues = {
     email: "",
@@ -22,7 +23,7 @@ const ForgotPassword = () => {
   const validationSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email").required("The email field is required."),
   });
-  console.log(initialValues);
+
   const handleSubmit = async (values) => {
     setLoading(true);
     setErrorMessage("");
@@ -31,8 +32,9 @@ const ForgotPassword = () => {
     try {
       const response = await reqForgotPassword(values.email);
       if (response.status === 200) {
-        toast.success("Please check your email.");
+        toast.success("Password reset link sent to your email.");
         localStorage.setItem("reset", response.data.data);
+        navigate("/login");
       } else {
         toast.error("Something went wrong, please try again.");
       }
