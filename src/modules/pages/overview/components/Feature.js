@@ -11,9 +11,7 @@ const Feature = () => {
   return (
     <div className={"mt-5 mb-5"}>
       <div className="mt-5 py-5">
-        <h3 className="text-center font-semibold text-2xl mb-10 mt-10 xs:mb-0">
-          {t("overview.feature.heading")}
-        </h3>
+        <h3 className="text-center font-semibold text-2xl mb-10 mt-10 xs:mb-0">{t("overview.feature.heading")}</h3>
       </div>
       <div className="container mx-auto xs:p-5">
         <Card className="rounded-lg mb-5 mx-auto max-w-6xl">
@@ -34,11 +32,7 @@ const Feature = () => {
             </div>
             <div className="lg:mt-0 lg:col-span-5 lg:flex justify-center items-center">
               <div className="grid grid-cols-1">
-                <img
-                  className="object-fill h-48 w-96"
-                  src={reliability}
-                  alt={""}
-                />
+                <img className="object-fill h-48 w-96" src={reliability} alt={""} />
                 <p className="max-w-xl mb-6 text-dark-500 lg:mb-8 md:text-lg lg:text-2xl flex justify-center items-center dark:text-gray-500">
                   {t("overview.feature.heading1")}
                 </p>
@@ -64,11 +58,7 @@ const Feature = () => {
             </div>
             <div className="lg:mt-0 lg:col-span-5 lg:flex justify-center items-center">
               <div className="grid grid-cols-1">
-                <img
-                  className="object-fill h-48 w-96"
-                  src={security}
-                  alt={"/"}
-                />
+                <img className="object-fill h-48 w-96" src={security} alt={"/"} />
                 <p className="max-w-xl mb-6 text-dark-500 lg:mb-8 md:text-lg lg:text-2xl flex justify-center items-center dark:text-gray-500">
                   {t("overview.feature.heading2")}
                 </p>
@@ -94,11 +84,7 @@ const Feature = () => {
             </div>
             <div className="lg:mt-0 lg:col-span-5 lg:flex justify-center items-center">
               <div className="grid grid-cols-1">
-                <img
-                  className="object-fill h-48 w-96"
-                  src={management}
-                  alt={"/"}
-                />
+                <img className="object-fill h-48 w-96" src={management} alt={"/"} />
                 <p className="max-w-xl mb-6 text-dark-500 lg:mb-8 md:text-lg lg:text-2xl flex justify-center items-center dark:text-gray-500">
                   {t("overview.feature.heading3")}
                 </p>

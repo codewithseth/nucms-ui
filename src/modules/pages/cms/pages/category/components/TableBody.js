@@ -5,25 +5,25 @@ import { ReactComponent as Delete } from "../../../../../../_timouy/assets/svg/t
 import moment from "moment";
 
 const TableBody = ({ title, date, handleEdit, handleDelete }) => {
-    const formattedDate = moment(date.createdAt).format('LL');
+  const formattedDate = moment(date.createdAt).format("LL");
 
-    return (
-        <Table.Body className="divide-y">
-            <Table.Row className="flex flex-col sm:table-row">
-                <Table.Cell className="font-semibold whitespace-nowrap text-gray-900 dark:text-white">
-                    {title} - {formattedDate}
-                </Table.Cell>
-                <Table.Cell className="flex justify-end text-end space-x-2">
-                    <button onClick={handleEdit}>
-                        <Edit />
-                    </button>
-                    <button onClick={handleDelete}>
-                        <Delete />
-                    </button>
-                </Table.Cell>
-            </Table.Row>
-        </Table.Body>
-    );
+  return (
+    <Table.Body className="divide-y">
+      <Table.Row className="flex flex-col sm:table-row">
+        <Table.Cell className="font-semibold whitespace-nowrap text-gray-900 dark:text-white">
+          {title} - {formattedDate}
+        </Table.Cell>
+        <Table.Cell className="flex justify-end text-end space-x-2">
+          <button onClick={handleEdit}>
+            <Edit />
+          </button>
+          <button onClick={handleDelete}>
+            <Delete />
+          </button>
+        </Table.Cell>
+      </Table.Row>
+    </Table.Body>
+  );
 };
 
 export default TableBody;

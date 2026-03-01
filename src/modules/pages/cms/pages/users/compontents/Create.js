@@ -20,9 +20,9 @@ const CreateUserModal = ({ show, handleClose, users }) => {
   const { createUser } = useUser();
 
   const validationSchema = Yup.object().shape({
-      username: Yup.string().required("Required"),
-      password: Yup.string().required("Required"),
-      roles: Yup.string().required("Required"),
+    username: Yup.string().required("Required"),
+    password: Yup.string().required("Required"),
+    roles: Yup.string().required("Required"),
   });
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
@@ -56,38 +56,20 @@ const CreateUserModal = ({ show, handleClose, users }) => {
               <div className="space-y-6">
                 <div className="flex items-center justify-between gap-4">
                   <div className="block w-full">
-                    <InputForm
-                      label="Username"
-                      name="username"
-                      type="text"
-                      placeholder="Username"
-                    />
+                    <InputForm label="Username" name="username" type="text" placeholder="Username" />
                   </div>
                   <div className="block w-full">
-                    <InputForm
-                      label="Password"
-                      name="password"
-                      type="text"
-                      placeholder="Password"
-                    />
+                    <InputForm label="Password" name="password" type="text" placeholder="Password" />
                   </div>
                 </div>
                 <div className="flex items-center justify-between gap-4">
                   <div className="block w-full">
-                    <InputForm
-                      label="Role"
-                      name="roles"
-                      type="text"
-                      placeholder="Role"
-                    />
+                    <InputForm label="Role" name="roles" type="text" placeholder="Role" />
                   </div>
                   <div className="block w-full">
                     <div className="block mb-3">
                       <Label>Status</Label>
-                      <ToggleSwitch
-                        className="mt-2"
-                        checked={switch1} onChange={setSwitch1}
-                      />
+                      <ToggleSwitch className="mt-2" checked={switch1} onChange={setSwitch1} />
                     </div>
                   </div>
                 </div>

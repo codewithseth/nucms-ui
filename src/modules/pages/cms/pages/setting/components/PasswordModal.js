@@ -10,11 +10,11 @@ const UpdatePassword = ({ id }) => {
   const initialValues = {
     oldPassword: "",
     newPassword: "",
-    confirmNewPassword: ""
+    confirmNewPassword: "",
   };
 
   const { changeUserPassword } = useUser();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
   // min 5 characters, 1 upper case letter, 1 lower case letter, 1 numeric digit.
@@ -41,7 +41,7 @@ const UpdatePassword = ({ id }) => {
       // handleClose();
       resetForm();
       localStorage.removeItem("token");
-      navigate('/login')
+      navigate("/login");
       window.location.reload();
     } catch (error) {
       console.error("Error creating user:", error);
@@ -65,20 +65,10 @@ const UpdatePassword = ({ id }) => {
           <div className="space-y-6">
             <div className="flex flex-col items-center justify-between gap-1">
               <div className="block w-full">
-                <InputPassword
-                  label="Old Password"
-                  name="oldPassword"
-                  placeholder="Old Password"
-                  type="text"
-                />
+                <InputPassword label="Old Password" name="oldPassword" placeholder="Old Password" type="text" />
               </div>
               <div className="block w-full">
-                <InputPassword
-                  label="New Password"
-                  name="newPassword"
-                  placeholder="New Password"
-                  type="text"
-                />
+                <InputPassword label="New Password" name="newPassword" placeholder="New Password" type="text" />
               </div>
               <div className="block w-full">
                 <InputPassword
@@ -91,12 +81,7 @@ const UpdatePassword = ({ id }) => {
             </div>
           </div>
           <div className="flex justify-end">
-            <Button
-              color="light"
-              pill
-              type="submit"
-              className="rounded-lg focus:ring-0 mt-4"
-              disabled={isSubmitting}>
+            <Button color="light" pill type="submit" className="rounded-lg focus:ring-0 mt-4" disabled={isSubmitting}>
               Save password
             </Button>
           </div>

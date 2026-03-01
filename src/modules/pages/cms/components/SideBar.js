@@ -8,24 +8,27 @@ import { ReactComponent as Appearance } from "../../../../_timouy/assets/svg/wan
 import { ReactComponent as Setting } from "../../../../_timouy/assets/svg/setting.svg";
 import { ReactComponent as Home } from "../../../../_timouy/assets/svg/home.svg";
 import { ReactComponent as Internet } from "../../../../_timouy/assets/svg/internet.svg";
-import { ReactComponent as Slider } from "../../../../_timouy/assets/svg/carousel-1.svg"
+import { ReactComponent as Slider } from "../../../../_timouy/assets/svg/carousel-1.svg";
 import burger from "../../../../_timouy/assets/svg/burger.svg";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Dropdown } from "flowbite-react";
 import { HiLogout, HiUser } from "react-icons/hi";
 import { useEffect } from "react";
 import useUser from "../pages/users/core/action";
-import no_avartar from "../../../../_timouy/assets/images/pf.png"
+import no_avartar from "../../../../_timouy/assets/images/pf.png";
 
 export const SideBar = () => {
   const location = useLocation();
-  const { getUserInfo, user: { info: user } } = useUser()
+  const {
+    getUserInfo,
+    user: { info: user },
+  } = useUser();
 
   useEffect(() => {
-    getUserInfo()
+    getUserInfo();
   }, []);
 
-  const isBasePathActive = location.pathname.startsWith('/user-dashboard/setting');
+  const isBasePathActive = location.pathname.startsWith("/user-dashboard/setting");
 
   const isActive = (path) => {
     return location.pathname === path;
@@ -54,18 +57,16 @@ export const SideBar = () => {
                 </span>
               </Link>
 
-              <Link to={`/${user?.id}/template/ngo`} target="_blank" className="flex text-center items-center"><Internet className="me-1" /> timouy.com</Link>
+              <Link to={`/${user?.id}/template/ngo`} target="_blank" className="flex text-center items-center">
+                <Internet className="me-1" /> timouy.com
+              </Link>
             </div>
             <Dropdown
               label=""
               dismissOnClick={true}
               renderTrigger={() => (
                 <div className="flex items-center gap-2 cursor-pointer">
-                  <img
-                    class="w-8 h-8 rounded-full"
-                    src={user?.profile || no_avartar}
-                    alt="user"
-                  />
+                  <img class="w-8 h-8 rounded-full" src={user?.profile || no_avartar} alt="user" />
                   <p class="text-sm text-gray-900 dark:text-white" role="none">
                     {user?.username || "username"}
                   </p>
@@ -74,23 +75,16 @@ export const SideBar = () => {
             >
               <Dropdown.Header>
                 <div className="flex gap-4 items-center">
-                  <img
-                    class="w-8 h-8 rounded-full"
-                    src={user?.profile || no_avartar}
-                    alt="user"
-                  />
+                  <img class="w-8 h-8 rounded-full" src={user?.profile || no_avartar} alt="user" />
                   <div>
-                    <span className="block text-sm">
-                      {" "}
-                      {user?.username || "username"}
-                    </span>
-                    <span className="block truncate text-sm font-medium">
-                      {user?.email || "email"}
-                    </span>
+                    <span className="block text-sm"> {user?.username || "username"}</span>
+                    <span className="block truncate text-sm font-medium">{user?.email || "email"}</span>
                   </div>
                 </div>
               </Dropdown.Header>
-              <Dropdown.Item as={Link} to="/user-dashboard/setting" icon={HiUser}>My Profile</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/user-dashboard/setting" icon={HiUser}>
+                My Profile
+              </Dropdown.Item>
               <Dropdown.Item
                 icon={HiLogout}
                 onClick={() => {
@@ -116,8 +110,9 @@ export const SideBar = () => {
             <li>
               <Link
                 to="/user-dashboard"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group ${isActive("/user-dashboard") ? "active-link" : ""
-                  }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group ${
+                  isActive("/user-dashboard") ? "active-link" : ""
+                }`}
               >
                 <Home />
                 <span className="ms-3">My Home</span>
@@ -126,8 +121,9 @@ export const SideBar = () => {
             <li>
               <Link
                 to="/user-dashboard/post"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/post") ? "active-link" : ""
-                  }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${
+                  isActive("/user-dashboard/post") ? "active-link" : ""
+                }`}
               >
                 <Post />
                 <span className="flex-1 ms-3 whitespace-nowrap">Post</span>
@@ -136,8 +132,9 @@ export const SideBar = () => {
             <li>
               <Link
                 to="/user-dashboard/category"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group ${isActive("/user-dashboard/category") ? "active-link" : ""
-                  }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group ${
+                  isActive("/user-dashboard/category") ? "active-link" : ""
+                }`}
               >
                 <Category />
                 <span className="flex-1 ms-3 whitespace-nowrap">Category</span>
@@ -146,8 +143,9 @@ export const SideBar = () => {
             <li>
               <Link
                 to="/user-dashboard/media"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/media") ? "active-link" : ""
-                  }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${
+                  isActive("/user-dashboard/media") ? "active-link" : ""
+                }`}
               >
                 <Media />
                 <span className="flex-1 ms-3 whitespace-nowrap">Media</span>
@@ -156,8 +154,9 @@ export const SideBar = () => {
             <li>
               <Link
                 to="/user-dashboard/slider"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/slider") ? "active-link" : ""
-                  }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${
+                  isActive("/user-dashboard/slider") ? "active-link" : ""
+                }`}
               >
                 <Slider />
                 <span className="flex-1 ms-3 whitespace-nowrap">Slider</span>
@@ -166,8 +165,9 @@ export const SideBar = () => {
             <li>
               <Link
                 to="/user-dashboard/template"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/template") ? "active-link" : ""
-                  }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${
+                  isActive("/user-dashboard/template") ? "active-link" : ""
+                }`}
               >
                 <Appearance />
                 <span className="flex-1 ms-3 whitespace-nowrap">Template</span>
@@ -176,8 +176,9 @@ export const SideBar = () => {
             <li>
               <Link
                 to="/user-dashboard/comment"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/comment") ? "active-link" : ""
-                  }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${
+                  isActive("/user-dashboard/comment") ? "active-link" : ""
+                }`}
               >
                 <Comment />
                 <span className="flex-1 ms-3 whitespace-nowrap">Comment</span>
@@ -186,8 +187,9 @@ export const SideBar = () => {
             <li>
               <NavLink
                 to="/user-dashboard/setting/contact-setting"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group ${isBasePathActive ? 'active-link' : ''
-                  }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group ${
+                  isBasePathActive ? "active-link" : ""
+                }`}
               >
                 <Setting />
                 <span className="flex-1 ms-3 whitespace-nowrap">Setting</span>

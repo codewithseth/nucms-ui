@@ -11,9 +11,7 @@ import usePost from "../../cms/pages/post/core/action";
 
 export const MediaCategory = () => {
   const { id, catid, pid, catname } = useParams();
-  const { postsByCategory, postsByCategoryPub, loading } = useSelector(
-    (state) => state.post
-  );
+  const { postsByCategory, postsByCategoryPub, loading } = useSelector((state) => state.post);
   const { user } = useSelector((state) => state.auth);
   const { getPostsByCategory, getPostsByCategoryPub } = usePost();
 
@@ -48,13 +46,11 @@ export const MediaCategory = () => {
                     const postDate = new Date(post.createdAt);
                     const differenceInMilliseconds = today - postDate;
                     const millisecondsInADay = 1000 * 60 * 60 * 24;
-                    const differenceInDays = Math.floor(
-                      differenceInMilliseconds / millisecondsInADay
-                    );
+                    const differenceInDays = Math.floor(differenceInMilliseconds / millisecondsInADay);
 
                     return (
                       <HorizontalCard
-                        key={post.id} 
+                        key={post.id}
                         image={`${BASE_URL}${post?.image}`}
                         profile={`${BASE_URL}${post.author.profileUrl}`}
                         author={post.author.username}
@@ -85,14 +81,10 @@ export const MediaCategory = () => {
             <div className="row">
               {catid
                 ? [...postsByCategoryList]
-                    .sort(
-                      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-                    )
+                    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
                     .splice(0, 4)
                     .map((post) => (
-                      <Link
-                        to={`/${catid}/template/media/media-item/${post.id}`}
-                      >
+                      <Link to={`/${catid}/template/media/media-item/${post.id}`}>
                         <NewsCard
                           key={post.id}
                           image={`${BASE_URL}${post?.image}`}
@@ -102,29 +94,20 @@ export const MediaCategory = () => {
                       </Link>
                     ))
                 : catname
-                ? dataExport.mockData
-                    .filter((item) => item.cate === catname)
-                    .map((item, index) => (
-                      <Link
-                        to={`/preview/template/media/media-item/${item.id}`}
-                      >
-                        <NewsCard
-                          key={item.id}
-                          image={item.image}
-                          title={item.title}
-                          desc={item.desc}
-                        />
-                      </Link>
-                    ))
-                : ""}
+                  ? dataExport.mockData
+                      .filter((item) => item.cate === catname)
+                      .map((item, index) => (
+                        <Link to={`/preview/template/media/media-item/${item.id}`}>
+                          <NewsCard key={item.id} image={item.image} title={item.title} desc={item.desc} />
+                        </Link>
+                      ))
+                  : ""}
             </div>
 
             <div className="row">
               {catid
                 ? [...postsByCategoryList]
-                    .sort(
-                      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-                    )
+                    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
                     .splice(4, 8)
                     .map((post) => (
                       <Link to={`${user.id}/template/media/media-item/${pid}`}>
@@ -137,23 +120,18 @@ export const MediaCategory = () => {
                       </Link>
                     ))
                 : catname
-                ? dataExport.mockData
-                    .filter((item) => item.cate === catname)
-                    .splice(4, 8)
-                    .map((item, index) => (
-                      <NewsCard
-                        key={index}
-                        image={item.image}
-                        title={item.title}
-                        desc={item.desc}
-                      />
-                    ))
-                : ""}
+                  ? dataExport.mockData
+                      .filter((item) => item.cate === catname)
+                      .splice(4, 8)
+                      .map((item, index) => (
+                        <NewsCard key={index} image={item.image} title={item.title} desc={item.desc} />
+                      ))
+                  : ""}
             </div>
           </div>
         </div>
       )}
-      <FooterPage/>
+      <FooterPage />
     </div>
   );
 };

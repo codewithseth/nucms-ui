@@ -1,15 +1,15 @@
-'use client';
-import { Footer } from 'flowbite-react';
-import mail from '../../../_timouy/assets/images/mail.png'
-import tel from '../../../_timouy/assets/images/phone.png'
-import facebook from '../../../_timouy/assets/images/Facebook Outline.png'
-import linkIn from '../../../_timouy/assets/images/Linkedin Outline.png'
-import logo from '../../../_timouy/assets/svg/logo.svg'
+"use client";
+import { Footer } from "flowbite-react";
+import mail from "../../../_timouy/assets/images/mail.png";
+import tel from "../../../_timouy/assets/images/phone.png";
+import facebook from "../../../_timouy/assets/images/Facebook Outline.png";
+import linkIn from "../../../_timouy/assets/images/Linkedin Outline.png";
+import logo from "../../../_timouy/assets/svg/logo.svg";
 import { useTranslation } from "react-i18next";
 
 function MyFooter() {
   const { t } = useTranslation();
-  
+
   return (
     <Footer container>
       <div className="mx-auto w-full sm:px-4 lg:py-4">
@@ -40,10 +40,7 @@ function MyFooter() {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 xs:grid-cols-3">
             <div>
-              <Footer.Title
-                title={t("footer.overview.heading")}
-                className="font-body"
-              />
+              <Footer.Title title={t("footer.overview.heading")} className="font-body" />
               <Footer.LinkGroup col>
                 <Footer.Link href="#" className="font-body">
                   {t("footer.overview.guideline")}
@@ -57,10 +54,7 @@ function MyFooter() {
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title
-                title={t("footer.about.heading")}
-                className="font-body"
-              />
+              <Footer.Title title={t("footer.about.heading")} className="font-body" />
               <Footer.LinkGroup col>
                 <Footer.Link href="#" className="font-body">
                   {t("footer.about.core")}
@@ -74,10 +68,7 @@ function MyFooter() {
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title
-                title={t("footer.followus.heading")}
-                className="font-body"
-              />
+              <Footer.Title title={t("footer.followus.heading")} className="font-body" />
               <Footer.LinkGroup col>
                 <Footer.Link href="#" className="font-body">
                   {t("footer.followus.gitlab")}
@@ -94,11 +85,7 @@ function MyFooter() {
         </div>
         <Footer.Divider />
         <div className=" w-full sm:flex sm:items-center sm:justify-center">
-          <Footer.Copyright
-            href="#"
-            by={t("footer.copyright")}
-            year={new Date().getFullYear()}
-          />
+          <Footer.Copyright href="#" by={t("footer.copyright")} year={new Date().getFullYear()} />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center"></div>
         </div>
       </div>
@@ -106,4 +93,4 @@ function MyFooter() {
   );
 }
 
-export default MyFooter
+export default MyFooter;

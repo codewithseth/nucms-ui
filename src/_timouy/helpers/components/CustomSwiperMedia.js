@@ -56,11 +56,7 @@ const CustomSwiperMedia = ({ postList, id, link }) => {
                   <SwiperSlide key={index}>
                     <Link to={link ?? ""}>
                       <SwiperCard
-                        image={
-                          post?.image
-                            ? `${BASE_URL}${post?.image}`
-                            : no_thumbnail
-                        }
+                        image={post?.image ? `${BASE_URL}${post?.image}` : no_thumbnail}
                         title={post.title}
                         author={post.author.username || "Panha"}
                         days={relativeTime}
@@ -73,12 +69,7 @@ const CustomSwiperMedia = ({ postList, id, link }) => {
                 <div className="carousel-card w-full h-full">
                   <SwiperSlide key={index}>
                     <Link to={`/preview/template/media/media-item/${item.id}`}>
-                      <SwiperCard
-                        image={item.image}
-                        title={item.title}
-                        author={item.author}
-                        days={item.days}
-                      />
+                      <SwiperCard image={item.image} title={item.title} author={item.author} days={item.days} />
                     </Link>
                   </SwiperSlide>
                 </div>

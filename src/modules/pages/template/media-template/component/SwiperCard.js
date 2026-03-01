@@ -15,9 +15,7 @@ export const SwiperCard = ({ image, title, author, days }) => {
         </div> */}
       </div>
       <div className="p-5 flex flex-col justify-between h-full">
-        <h1 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">
-          {title}
-        </h1>
+        <h1 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">{title}</h1>
         <div className="flex items-center justify-between mt-3">
           <p className="text-sm text-gray-500 font-medium">{author}</p>
           <Badge color="info" size="sm" icon={HiClock} className="px-2 py-1">

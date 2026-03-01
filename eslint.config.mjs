@@ -1,7 +1,7 @@
-import { defineConfig } from 'eslint-define-config';
+import { defineConfig } from "eslint-define-config";
 
 export default defineConfig({
   rules: {
-    "react/no-unescaped-entities": 0
+    "react/no-unescaped-entities": 0,
   },
 });

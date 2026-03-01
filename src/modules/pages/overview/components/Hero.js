@@ -19,10 +19,7 @@ export const Hero = () => {
               </h1>
             </div>
 
-            <p
-              className="md:text-sm lg:text-lg text-gray-900 dark:text-white"
-              id="name"
-            >
+            <p className="md:text-sm lg:text-lg text-gray-900 dark:text-white" id="name">
               {t("overview.herosection.description")}
             </p>
 

@@ -40,9 +40,7 @@ const CitizenTemplate = () => {
             </div>
             <div className="relative mx-auto max-w-7xl">
               <div className="text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  Today news
-                </h2>
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Today news</h2>
               </div>
               <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
                 {postList.length === 0 ? (
@@ -108,7 +106,6 @@ const CitizenTemplate = () => {
             )}
           </div>
         </div>
-
       </section>
 
       <Footer />

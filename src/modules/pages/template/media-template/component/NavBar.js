@@ -54,11 +54,7 @@ export const Header = () => {
         <div>
           <Navbar.Link
             key={cat.id}
-            href={
-              cat.name === "Home"
-                ? `/preview/template/media`
-                : `/preview/template/media/${cat.name}`
-            }
+            href={cat.name === "Home" ? `/preview/template/media` : `/preview/template/media/${cat.name}`}
           >
             <p className="text-lg"> {isKhmer ? cat.khName : cat.name}</p>
           </Navbar.Link>
@@ -78,9 +74,7 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-10 px-6 md:px-12 py-0 bg-white border-b-2">
       <Navbar fluid rounded className="p-2 lex items-center justify-between">
-        <Navbar.Brand
-          href={id ? `/${user?.id}/template/media` : "/preview/template/media"}
-        >
+        <Navbar.Brand href={id ? `/${user?.id}/template/media` : "/preview/template/media"}>
           {<img src={logo} className="mr-3 h-6 sm:h-9" alt="Logo" />}
         </Navbar.Brand>
 
@@ -88,24 +82,11 @@ export const Header = () => {
           <Navbar.Toggle onClick={toggleMobileMenu} />
         </div>
 
-        <Navbar.Collapse
-          className={`${
-            isMobileMenuOpen ? "block" : "hidden md:flex"
-          } space-x-6 text-lg font-medium`}
-        >
+        <Navbar.Collapse className={`${isMobileMenuOpen ? "block" : "hidden md:flex"} space-x-6 text-lg font-medium`}>
           {renderLinks()}
         </Navbar.Collapse>
 
-        <Dropdown
-          label={
-            <Avatar
-              img={changeLanguageIcon}
-              alt="Change Language"
-              className="cursor-pointer"
-            />
-          }
-          inline
-        >
+        <Dropdown label={<Avatar img={changeLanguageIcon} alt="Change Language" className="cursor-pointer" />} inline>
           {languages.map((lng) => (
             <Dropdown.Item
               key={lng.code}
@@ -113,12 +94,7 @@ export const Header = () => {
               className={isKhmer === (lng.code === "kh") ? "bg-gray-100" : ""}
             >
               <div className="flex items-center">
-                <Avatar
-                  img={lng.flag}
-                  rounded
-                  alt={`${lng.lang} flag`}
-                  size="xs"
-                />
+                <Avatar img={lng.flag} rounded alt={`${lng.lang} flag`} size="xs" />
                 <span className="ml-2">{lng.lang}</span>
               </div>
             </Dropdown.Item>

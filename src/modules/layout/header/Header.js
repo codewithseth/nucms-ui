@@ -28,16 +28,10 @@ export const Header = () => {
         </div>
         {/* For Desktop */}
         <div className="lg:flex items-center gap-7 hidden text-black font-semibold list-none">
-          <NavLink
-            className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            to="/"
-          >
+          <NavLink className={({ isActive }) => (isActive ? activeLink : normalLink)} to="/">
             {t("navbar.home")}
           </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            to="/overview"
-          >
+          <NavLink className={({ isActive }) => (isActive ? activeLink : normalLink)} to="/overview">
             {t("navbar.overview")}
           </NavLink>
           {/* <NavLink
@@ -46,10 +40,7 @@ export const Header = () => {
           >
             {t("navbar.documentation")}
           </NavLink> */}
-          <NavLink
-            className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            to="/about"
-          >
+          <NavLink className={({ isActive }) => (isActive ? activeLink : normalLink)} to="/about">
             {t("navbar.aboutus")}
           </NavLink>
         </div>
@@ -69,45 +60,23 @@ export const Header = () => {
           </NavLink>
         </div>
         <button onClick={toggleMenu} className="lg:hidden py-4">
-          <img
-            src={isMenuOpen ? close : menu}
-            alt="menu-toggle"
-            className="w-7"
-          />
+          <img src={isMenuOpen ? close : menu} alt="menu-toggle" className="w-7" />
         </button>
       </div>
 
       {isMenuOpen && (
         <div className="lg:hidden font-semibold py-1">
-          <NavLink
-            className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            to="/"
-          >
+          <NavLink className={({ isActive }) => (isActive ? activeLink : normalLink)} to="/">
             <div className="my-2 pb-2 block border-b-2">{t("navbar.home")}</div>
           </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            to="/overview"
-          >
-            <div className="my-2 pb-2 block border-b-2">
-              {t("navbar.overview")}
-            </div>
+          <NavLink className={({ isActive }) => (isActive ? activeLink : normalLink)} to="/overview">
+            <div className="my-2 pb-2 block border-b-2">{t("navbar.overview")}</div>
           </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            to="/documentation"
-          >
-            <div className="my-2 pb-2 block border-b-2">
-              {t("navbar.documentation")}
-            </div>
+          <NavLink className={({ isActive }) => (isActive ? activeLink : normalLink)} to="/documentation">
+            <div className="my-2 pb-2 block border-b-2">{t("navbar.documentation")}</div>
           </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            to="/about"
-          >
-            <div className="my-2 pb-2 block border-b-2">
-              {t("navbar.aboutus")}
-            </div>
+          <NavLink className={({ isActive }) => (isActive ? activeLink : normalLink)} to="/about">
+            <div className="my-2 pb-2 block border-b-2">{t("navbar.aboutus")}</div>
           </NavLink>
           <div className="my-2 block">
             <div className="inline-flex font-body text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer w-40">

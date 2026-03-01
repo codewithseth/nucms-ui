@@ -11,7 +11,7 @@ import no_thumbnail from "../../../../_timouy/assets/images/place-holder/no-thum
 
 const CitizenItem = () => {
   const { catid } = useParams();
-  const { postsByCategory, loading } = useSelector(state => state.post)
+  const { postsByCategory, loading } = useSelector((state) => state.post);
   const { getPostsByCategory } = usePost();
 
   useEffect(() => {
@@ -32,9 +32,7 @@ const CitizenItem = () => {
             </div>
             <div className="relative mx-auto max-w-7xl">
               <div className="text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  Popular Now
-                </h2>
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Popular Now</h2>
               </div>
               <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
                 {loading ? (
@@ -47,7 +45,7 @@ const CitizenItem = () => {
                   [...postsByCategory]
                     .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
                     .map((post) => {
-                      const formattedDate = moment(post.createdAt).format('MMMM DD, YYYY hh:mm A');
+                      const formattedDate = moment(post.createdAt).format("MMMM DD, YYYY hh:mm A");
 
                       return (
                         <CardCitizenFirstStyle

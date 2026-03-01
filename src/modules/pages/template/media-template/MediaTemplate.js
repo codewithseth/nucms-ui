@@ -62,17 +62,12 @@ const MediaTemplate = () => {
       <div className="hot-news w-full flex gap-4 p-2">
         <div class="left">
           <div className="carousel h-full">
-            <div
-              className="h-full sm:h-64 xl:h-80 2xl:h-96"
-              style={{ height: "100%" }}
-            >
+            <div className="h-full sm:h-64 xl:h-80 2xl:h-96" style={{ height: "100%" }}>
               <Carousel>
                 {id
                   ? postList.map((item, index) => (
                       <div className="carousel-card w-full h-full">
-                        <Link
-                          to={`/${id}/template/media/media-item/${item.id}`}
-                        >
+                        <Link to={`/${id}/template/media/media-item/${item.id}`}>
                           <CarouselCard
                             image={`${BASE_URL}${item.image}`}
                             title={item.title}
@@ -100,14 +95,8 @@ const MediaTemplate = () => {
         </div>
 
         <div className="right">
-          <AdCard
-            bgImg={dataExport.adData[0].bgImg}
-            link={dataExport.adData[0].link}
-          />
-          <AdCard
-            bgImg={dataExport.adData[1].bgImg}
-            link={dataExport.adData[0].link}
-          />
+          <AdCard bgImg={dataExport.adData[0].bgImg} link={dataExport.adData[0].link} />
+          <AdCard bgImg={dataExport.adData[1].bgImg} link={dataExport.adData[0].link} />
         </div>
       </div>
 
@@ -138,9 +127,7 @@ const MediaTemplate = () => {
                 const postDate = new Date(item.createdAt);
                 const differenceInMilliseconds = today - postDate;
                 const millisecondsInADay = 1000 * 60 * 60 * 24;
-                const differenceInDays = Math.floor(
-                  differenceInMilliseconds / millisecondsInADay
-                );
+                const differenceInDays = Math.floor(differenceInMilliseconds / millisecondsInADay);
 
                 return (
                   <Link to={`/${id}/template/media/media-item/${item.id}`}>
@@ -189,11 +176,7 @@ const MediaTemplate = () => {
                 ))
               : dataExport.mockData.slice(0, 4).map((item, index) => (
                   <Link to={`/preview/template/media/media-item/${item.id}`}>
-                    <NewsCard
-                      image={item.image}
-                      title={item.title}
-                      desc={item.desc.substring(0, 100) + "..."}
-                    />
+                    <NewsCard image={item.image} title={item.title} desc={item.desc.substring(0, 100) + "..."} />
                   </Link>
                 ))}
           </div>
@@ -210,11 +193,7 @@ const MediaTemplate = () => {
                 ))
               : dataExport.mockData.slice(4, 8).map((item, index) => (
                   <Link to={`/preview/template/media/media-item/${item.id}`}>
-                    <NewsCard
-                      image={item.image}
-                      title={item.title}
-                      desc={item.desc.substring(0, 100) + "..."}
-                    />
+                    <NewsCard image={item.image} title={item.title} desc={item.desc.substring(0, 100) + "..."} />
                   </Link>
                 ))}
           </div>

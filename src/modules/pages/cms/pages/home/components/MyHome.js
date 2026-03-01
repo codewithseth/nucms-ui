@@ -67,6 +67,6 @@ export const MyHome = () => {
           height={350}
         /> */}
       </div>
-    </div >
+    </div>
   );
 };

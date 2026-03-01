@@ -10,46 +10,46 @@ import { User } from "../pages/cms/pages/users/compontents/User";
 import { Slider } from "../pages/cms/pages/slider/components/Slider";
 
 const AuthRoutes = [
-    {
-        path: '/user-dashboard',
-        element: <MyHome />
-    },
-    {
-        path: 'user-dashboard/post',
-        element: <Post />
-    },
-    {
-        path: 'user-dashboard/category',
-        element: <Category />
-    },
-    {
-        path: 'user-dashboard/media',
-        element: <Media />
-    },
-    {
-        path: 'user-dashboard/slider',
-        element: <Slider />
-    },
-    {
-        path: 'user-dashboard/page',
-        element: <Page />
-    },
-    {
-        path: 'user-dashboard/comment',
-        element: <Comment />
-    },
-    {
-        path: 'user-dashboard/template',
-        element: <Appearance />
-    },
-    {
-        path: 'user-dashboard/user',
-        element: <User />
-    },
-    {
-        path: 'user-dashboard/setting/*',
-        element: <SettingPage />
-    },
-]
+  {
+    path: "/user-dashboard",
+    element: <MyHome />,
+  },
+  {
+    path: "user-dashboard/post",
+    element: <Post />,
+  },
+  {
+    path: "user-dashboard/category",
+    element: <Category />,
+  },
+  {
+    path: "user-dashboard/media",
+    element: <Media />,
+  },
+  {
+    path: "user-dashboard/slider",
+    element: <Slider />,
+  },
+  {
+    path: "user-dashboard/page",
+    element: <Page />,
+  },
+  {
+    path: "user-dashboard/comment",
+    element: <Comment />,
+  },
+  {
+    path: "user-dashboard/template",
+    element: <Appearance />,
+  },
+  {
+    path: "user-dashboard/user",
+    element: <User />,
+  },
+  {
+    path: "user-dashboard/setting/*",
+    element: <SettingPage />,
+  },
+];
 
 export default AuthRoutes;

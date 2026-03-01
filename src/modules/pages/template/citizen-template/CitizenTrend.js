@@ -12,9 +12,7 @@ const CitizenTrend = () => {
           <h2 className="text-lg font-semibold text-gray-900">Trending Now</h2>
           <section className="flex flex-col justify-center max-w-6xl min-h-screen px-4 py-10 mx-auto sm:px-6">
             <div className="flex flex-wrap items-center justify-between mb-8">
-              <h2 className="mr-10 text-4xl font-bold leading-none md:text-5xl">
-                Continually Scale Results
-              </h2>
+              <h2 className="mr-10 text-4xl font-bold leading-none md:text-5xl">Continually Scale Results</h2>
               <Link
                 to={"#"}
                 className="block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600"
@@ -47,9 +45,8 @@ const CitizenTrend = () => {
                         What Zombies Can Teach You About Food
                       </Link>
                       <p className="mb-4">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Nulla delectus corporis commodi aperiam, amet
-                        cupiditate?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla delectus corporis commodi
+                        aperiam, amet cupiditate?
                       </p>
                     </div>
                     <div>
@@ -86,10 +83,7 @@ const CitizenTrend = () => {
                       >
                         Old School Art
                       </Link>
-                      <p className="mb-4">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Nulla delectus.
-                      </p>
+                      <p className="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla delectus.</p>
                     </div>
                     <div>
                       <Link
@@ -126,8 +120,7 @@ const CitizenTrend = () => {
                         5 Things To Do About Rain
                       </Link>
                       <p className="mb-4">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ratione, neque. Eius, ea possimus.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, neque. Eius, ea possimus.
                       </p>
                     </div>
                     <div>

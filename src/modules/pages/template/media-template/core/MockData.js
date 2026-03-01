@@ -1,16 +1,15 @@
 const dataExport = {
   mockData: [
-    { 
+    {
       id: 1,
-      image:
-        "https://images.wsj.net/im-987430/?width=2000&size=1.9493177387914",
+      image: "https://images.wsj.net/im-987430/?width=2000&size=1.9493177387914",
       title: "Why Californians Have Some of the Highest Power Bills in the U.S",
       author: "Jane Doe",
       cate: "Life",
       desc: "BORREGO SPRINGS, Calif.—California is doing all it can to expand renewable energy production and rebuild its electrical infrastructure after flaws led to a series of devastating wildfires. The state’s big utilities are spending billions to bury power lines and insulate wires, while at the same time moving quickly away from fossil fuels by building big solar and wind farms and transmission lines to carry the power.",
       days: 10,
       date: new Date().getDate(),
-      pf: 'https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg'
+      pf: "https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg",
     },
     {
       id: 2,
@@ -22,8 +21,7 @@ const dataExport = {
       desc: "Omniscient Reader's Viewpoint (also called Omniscient Reader and often abbreviated to ORV) is an apocalyptic fantasy fiction webnovel, written by a Korean author duo writing under the pen name Sing Shong. It was originally written in Korean",
       days: 10,
       date: new Date().getDate(),
-      pf: 'https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg'
-
+      pf: "https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg",
     },
     {
       id: 3,
@@ -35,7 +33,7 @@ const dataExport = {
       desc: "Omniscient Reader's Viewpoint (also called Omniscient Reader and often abbreviated to ORV) is an apocalyptic fantasy fiction webnovel, written by a Korean author duo writing under the pen name Sing Shong. It was originally written in Korean",
       days: 5,
       date: new Date().getDate(),
-      pf: 'https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg'
+      pf: "https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg",
     },
     {
       id: 4,
@@ -47,8 +45,7 @@ const dataExport = {
       desc: "Omniscient Reader's Viewpoint (also called Omniscient Reader and often abbreviated to ORV) is an apocalyptic fantasy fiction webnovel, written by a Korean author duo writing under the pen name Sing Shong. It was originally written in Korean",
       days: 15,
       date: new Date().getDate(),
-      pf: 'https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg'
-
+      pf: "https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg",
     },
     {
       id: 5,
@@ -60,22 +57,19 @@ const dataExport = {
       desc: "Omniscient Reader's Viewpoint (also called Omniscient Reader and often abbreviated to ORV) is an apocalyptic fantasy fiction webnovel, written by a Korean author duo writing under the pen name Sing Shong. It was originally written in Korean",
       days: 20,
       date: new Date().getDate(),
-      pf: 'https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg'
-
+      pf: "https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg",
     },
     {
       id: 6,
       image:
         "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      title:
-        "Healthcare Providers Warn About Rising Cases of Preventable Diseases",
+      title: "Healthcare Providers Warn About Rising Cases of Preventable Diseases",
       author: "Nurse Sarah Connor",
       cate: "Life",
       desc: "Omniscient Reader's Viewpoint (also called Omniscient Reader and often abbreviated to ORV) is an apocalyptic fantasy fiction webnovel, written by a Korean author duo writing under the pen name Sing Shong. It was originally written in Korean",
       days: 25,
       date: new Date().getDate(),
-      pf: 'https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg'
-
+      pf: "https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg",
     },
     {
       id: 7,
@@ -87,8 +81,7 @@ const dataExport = {
       desc: "Omniscient Reader's Viewpoint (also called Omniscient Reader and often abbreviated to ORV) is an apocalyptic fantasy fiction webnovel, written by a Korean author duo writing under the pen name Sing Shong. It was originally written in Korean",
       days: 5,
       date: new Date().getDate(),
-      pf: 'https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg'
-
+      pf: "https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg",
     },
     {
       id: 8,
@@ -100,8 +93,7 @@ const dataExport = {
       desc: "Omniscient Reader's Viewpoint (also called Omniscient Reader and often abbreviated to ORV) is an apocalyptic fantasy fiction webnovel, written by a Korean author duo writing under the pen name Sing Shong. It was originally written in Korean",
       days: 15,
       date: new Date().getDate(),
-      pf: 'https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg'
-
+      pf: "https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg",
     },
     {
       id: 9,
@@ -113,22 +105,19 @@ const dataExport = {
       desc: "Omniscient Reader's Viewpoint (also called Omniscient Reader and often abbreviated to ORV) is an apocalyptic fantasy fiction webnovel, written by a Korean author duo writing under the pen name Sing Shong. It was originally written in Korean",
       days: 20,
       date: new Date().getDate(),
-      pf: 'https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg'
-
+      pf: "https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg",
     },
     {
       id: 10,
       image:
         "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      title:
-        "Healthcare Providers Warn About Rising Cases of Preventable Diseases",
+      title: "Healthcare Providers Warn About Rising Cases of Preventable Diseases",
       author: "Nurse Sarah Connor",
       cate: "Entertainment",
       desc: "Omniscient Reader's Viewpoint (also called Omniscient Reader and often abbreviated to ORV) is an apocalyptic fantasy fiction webnovel, written by a Korean author duo writing under the pen name Sing Shong. It was originally written in Korean",
       days: 25,
       date: new Date().getDate(),
-      pf: 'https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg'
-
+      pf: "https://i.pinimg.com/enabled/564x/51/04/0b/51040b07ce936cc6d9d9a1563fc67315.jpg",
     },
   ],
   adData: [
@@ -164,7 +153,13 @@ const dataExport = {
   navbar: {
     logo: "https://www.khmertimeskh.com/wp-content/uploads/2021/05/KHMER-TIMES.jpg",
     link: "https://www.khmertimeskh.com/category/khmer/",
-    cate: [{name : "Home", khName : 'ទំព័រដើម'}, {name :"Technology", khName : 'បច្ចេកវិទ្យា'},{name : "Sport", khName : 'កីឡា'},{name : "Economic", khName : 'សេដ្ឋកិច្ច'},{name : "Entertainment", khName : 'កំសាន្ត'}],
+    cate: [
+      { name: "Home", khName: "ទំព័រដើម" },
+      { name: "Technology", khName: "បច្ចេកវិទ្យា" },
+      { name: "Sport", khName: "កីឡា" },
+      { name: "Economic", khName: "សេដ្ឋកិច្ច" },
+      { name: "Entertainment", khName: "កំសាន្ត" },
+    ],
   },
 };
 

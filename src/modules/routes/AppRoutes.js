@@ -18,60 +18,58 @@ import MediaItem from "../pages/template/media-template/MediaItem";
 import NgoItem from "../pages/template/ngo-template/NgoItem";
 
 const AppRoutes = () => {
-    const { token } = useSelector(state => state.auth);
+  const { token } = useSelector((state) => state.auth);
 
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<App />}>
-                    {token ? (
-                        <>
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          {token ? (
+            <>
+              <Route path="/*" element={<PrivateRoutes />} />
+              <Route index element={<Navigate to="/user-dashboard" />} />
+            </>
+          ) : (
+            <>
+              <Route element={<Layout />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/overview" element={<OverView />} />
+                <Route path="/about" element={<About />} />
+                <Route path="*" element={<Navigate to="/" />} />
+              </Route>
 
-                            <Route path="/*" element={<PrivateRoutes />} />
-                            <Route index element={<Navigate to="/user-dashboard" />} />
-                        </>
-                    ) : (
-                        <>
-                            <Route element={<Layout />}>
-                                <Route path="/" element={<Home />} />
-                                <Route path="/overview" element={<OverView />} />
-                                <Route path="/about" element={<About />} />
-                                <Route path="*" element={<Navigate to="/" />} />
-                            </Route>
+              <Route path="/login" element={<AuthPage page="login" />} />
+              <Route path="/register" element={<AuthPage page="register" />} />
+              <Route path="/verify-email" element={<AuthPage page="verify-email" />} />
+              <Route path="/forgot-password" element={<AuthPage page="forgot-password" />} />
+              <Route path={`/reset-password/:ab`} element={<AuthPage page="reset-password" />} />
+              <Route path="*" element={<Navigate to="/login" />} />
+            </>
+          )}
+          {/* Ngo template */}
+          <Route path={`/:id/template/ngo`} element={<NgoTemplate />} />
+          <Route path={`/:id/template/ngo/:catid`} element={<Article />} />
+          <Route path={`/:id/template/ngo/ngo-item/:catid`} element={<NgoItem />} />
+          <Route path={`/preview/template/ngo`} element={<NgoTemplate />} />
+          {/* Citizen template */}
+          <Route path={`/:id/template/citizen`} element={<CitizenTemplate />} />
+          <Route path={`/:id/template/citizen/:catid`} element={<CitizenDetail />} />
+          <Route path={`/:id/template/citizen/citizen-item/:catid`} element={<CitizenItem />} />
+          <Route path={`/preview/template/citizen`} element={<CitizenTemplate />} />
+          {/* Media template */}
+          <Route path={`/:id/template/media`} element={<MediaTemplate />} />
+          <Route path={`/:id/template/media/:catid`} element={<MediaCategory />} />
+          <Route path={`/:id/template/media/media-item/:catid`} element={<MediaItem />} />
 
-                            <Route path="/login" element={<AuthPage page="login" />} />
-                            <Route path="/register" element={<AuthPage page="register" />} />
-                            <Route path="/verify-email" element={<AuthPage page="verify-email" />} />
-                            <Route path="/forgot-password" element={<AuthPage page="forgot-password" />} />
-                            <Route path={`/reset-password/:ab`} element={<AuthPage page="reset-password" />} />
-                            <Route path="*" element={<Navigate to="/login" />} />
-                        </>
-                    )}
-                    {/* Ngo template */}
-                    <Route path={`/:id/template/ngo`} element={<NgoTemplate />} />
-                    <Route path={`/:id/template/ngo/:catid`} element={<Article />} />
-                    <Route path={`/:id/template/ngo/ngo-item/:catid`} element={<NgoItem />} />
-                    <Route path={`/preview/template/ngo`} element={<NgoTemplate />} />
-                    {/* Citizen template */}
-                    <Route path={`/:id/template/citizen`} element={<CitizenTemplate />} />
-                    <Route path={`/:id/template/citizen/:catid`} element={<CitizenDetail />} />
-                    <Route path={`/:id/template/citizen/citizen-item/:catid`} element={<CitizenItem />} />
-                    <Route path={`/preview/template/citizen`} element={<CitizenTemplate />} />
-                    {/* Media template */}
-                    <Route path={`/:id/template/media`} element={<MediaTemplate />} />
-                    <Route path={`/:id/template/media/:catid`} element={<MediaCategory />} />
-                    <Route path={`/:id/template/media/media-item/:catid`} element={<MediaItem />} />
-                    
-                    <Route path={`/preview/template/media/`} element={<MediaTemplate />} />
-                    <Route path={`/preview/template/media/:catname`} element={<MediaCategory />} />
-                    <Route path={`/preview/template/media/media-item/:pid`} element={<MediaItem />} />
+          <Route path={`/preview/template/media/`} element={<MediaTemplate />} />
+          <Route path={`/preview/template/media/:catname`} element={<MediaCategory />} />
+          <Route path={`/preview/template/media/media-item/:pid`} element={<MediaItem />} />
 
-                    {/* <Route path={`/preview/template/media/:cat`} element={<MediaCategory/>} /> */}
-                    
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    );
+          {/* <Route path={`/preview/template/media/:cat`} element={<MediaCategory/>} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default AppRoutes;

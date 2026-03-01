@@ -3,7 +3,7 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import { useSelector } from "react-redux";
 import useMedia from "../../../cms/pages/media/core/action";
-import no_slider from "../../../../../_timouy/assets/images/place-holder/banner-placeholder.jpg"
+import no_slider from "../../../../../_timouy/assets/images/place-holder/banner-placeholder.jpg";
 
 const Banner = () => {
   const { slideShow } = useSelector((state) => state.media);
@@ -34,9 +34,11 @@ const Banner = () => {
   };
 
   if (!slideShow || slideShow.length === 0) {
-    return <div className="w-full h-full mt-5">
-      <p className="text-center text-black text-2xl">No Slides Available</p>
-    </div>;
+    return (
+      <div className="w-full h-full mt-5">
+        <p className="text-center text-black text-2xl">No Slides Available</p>
+      </div>
+    );
   }
 
   return (

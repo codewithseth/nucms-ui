@@ -11,9 +11,7 @@ export const Responsive = () => {
 
   return (
     <div className="bg-slate-100 sm:p-5">
-      <h3 className="text-center font-semibold text-2xl mb-10 mt-10">
-        {t("homepage.responsive.heading")}
-      </h3>
+      <h3 className="text-center font-semibold text-2xl mb-10 mt-10">{t("homepage.responsive.heading")}</h3>
       <div className="flex justify-center align-middle">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-10 mb-5">
           <Card>

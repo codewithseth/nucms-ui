@@ -11,13 +11,9 @@ const AlertConfirm = (props) => {
         <Modal.Body>
           <div className="text-center">
             <HiOutlineExclamationCircle className="mx-auto mb-4 h-20 w-20 text-gray-400 dark:text-gray-200" />
-            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-              {title}
-            </h3>
+            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">{title}</h3>
             <div className="flex justify-center gap-4">
-              <Button onClick={confirmDelete}>
-                {"Yes, I'm sure"}
-              </Button>
+              <Button onClick={confirmDelete}>{"Yes, I'm sure"}</Button>
               <Button color="gray" onClick={closeModal}>
                 No, cancel
               </Button>
@@ -27,6 +23,6 @@ const AlertConfirm = (props) => {
       </Modal>
     </>
   );
-}
+};
 
 export default AlertConfirm;

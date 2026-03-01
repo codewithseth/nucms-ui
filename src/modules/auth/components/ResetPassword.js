@@ -17,7 +17,7 @@ const ResetPassword = () => {
 
   const initialValues = {
     newPassword: "",
-    confirmNewPassword: ""
+    confirmNewPassword: "",
   };
 
   const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
@@ -36,7 +36,7 @@ const ResetPassword = () => {
     setLoading(true);
     setError(null); // Reset error state before making request
 
-    const ab = localStorage.getItem("reset")
+    const ab = localStorage.getItem("reset");
     try {
       // Call API to reset password
       await reqResetPassword(ab, values.newPassword);
@@ -53,19 +53,15 @@ const ResetPassword = () => {
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={handleSubmit}
-      validationSchema={validationSchema}
-    >
+    <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
       <Form>
         <div className="font-[sans-serif]">
           <div className="min-h-screen flex flex-col items-center justify-center">
             <div className="grid md:grid-cols-2 items-center gap-4 max-md:gap-8 max-w-6xl max-md:max-w-lg w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md">
               <div className="md:h-full bg-[#F0F6FF] rounded-xl lg:p-7 p-8">
                 <Link to="/">
-                  <img src={logo} alt='-_-' className='w-12 mb-2' />
-                  <p className='font-semibold text-lg'>Welcome to Timouy</p>
+                  <img src={logo} alt="-_-" className="w-12 mb-2" />
+                  <p className="font-semibold text-lg">Welcome to Timouy</p>
                   <p>Create your own website.</p>
                   <img src={auth} className="object-contain w-96 m-auto hidden md:block" alt="verify" />
                 </Link>
@@ -106,7 +102,9 @@ const ResetPassword = () => {
                     <Loading /> Loading...
                   </Button>
                 ) : (
-                  <Button type="submit" className="w-full">Send</Button>
+                  <Button type="submit" className="w-full">
+                    Send
+                  </Button>
                 )}
               </div>
             </div>

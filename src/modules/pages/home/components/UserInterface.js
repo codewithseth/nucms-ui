@@ -7,9 +7,7 @@ function UserInterface() {
   const { t } = useTranslation();
   return (
     <div>
-      <h3 className="text-center font-semibold text-2xl mb-10 mt-10">
-        {t("homepage.interface.heading")}
-      </h3>
+      <h3 className="text-center font-semibold text-2xl mb-10 mt-10">{t("homepage.interface.heading")}</h3>
       <div className="flex justify-center align-middle">
         <NavLink
           to="/login"

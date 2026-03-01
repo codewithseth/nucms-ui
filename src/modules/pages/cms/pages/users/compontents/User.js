@@ -54,10 +54,7 @@ export const User = () => {
           <Link>Team</Link>
           <div>
             <form class="max-w-md mx-auto">
-              <label
-                for="default-search"
-                class=" text-sm font-medium text-gray-900 sr-only dark:text-white"
-              >
+              <label for="default-search" class=" text-sm font-medium text-gray-900 sr-only dark:text-white">
                 Search
               </label>
               <div class="relative">
@@ -99,11 +96,7 @@ export const User = () => {
           {renderedUser}
         </Table>
         <CreateUser show={showModal} handleClose={handleOpenModal} />
-        <EditUser
-          show={showEditModal}
-          handleClose={handleEditModal}
-          user={selectedUser}
-        />
+        <EditUser show={showEditModal} handleClose={handleEditModal} user={selectedUser} />
       </div>
     </>
   );

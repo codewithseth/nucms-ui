@@ -13,7 +13,7 @@ export const comment = [
     title: "Pizza",
     comment: "Love it!!",
     status: "spam",
-    date: new Date().toString()
+    date: new Date().toString(),
   },
   {
     id: 3,

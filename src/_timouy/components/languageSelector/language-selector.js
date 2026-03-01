@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Dropdown, Avatar } from "flowbite-react";
 import englishImg from "../../../_timouy/assets/svg/english.svg";
@@ -20,16 +20,7 @@ const LanguageSelector = () => {
   ];
 
   return (
-    <Dropdown
-      label={
-        <Avatar
-          img={changeLanguageIcon}
-          alt="Change Language"
-          className="cursor-pointer"
-        />
-      }
-      inline
-    >
+    <Dropdown label={<Avatar img={changeLanguageIcon} alt="Change Language" className="cursor-pointer" />} inline>
       {languages.map((lng) => (
         <Dropdown.Item
           key={lng.code}

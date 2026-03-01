@@ -10,20 +10,12 @@ export const Tamplate = () => {
   const { t } = useTranslation();
   return (
     <div>
-      <h3 className="text-center font-semibold text-2xl mb-10 mt-10">
-        {t("homepage.provide.heading")}
-      </h3>
+      <h3 className="text-center font-semibold text-2xl mb-10 mt-10">{t("homepage.provide.heading")}</h3>
       <div className="flex justify-center align-middle">
         <div className="grid lg:grid-cols-3 md:grid-cols-1 gap-10 mb-5 xs:p-5">
           <Card className="max-w-sm">
             <div className="flex flex-col items-center pb-10">
-              <img
-                alt="citizen-tamplate"
-                height="96"
-                src={citizen}
-                width="96"
-                className="mb-3"
-              />
+              <img alt="citizen-tamplate" height="96" src={citizen} width="96" className="mb-3" />
               <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
                 {t("homepage.provide.heading1")}
               </h5>
@@ -43,13 +35,7 @@ export const Tamplate = () => {
           </Card>
           <Card className="max-w-sm">
             <div className="flex flex-col items-center pb-10">
-              <img
-                alt="citizen-tamplate"
-                height="96"
-                src={ngo}
-                width="96"
-                className="mb-3"
-              />
+              <img alt="citizen-tamplate" height="96" src={ngo} width="96" className="mb-3" />
               <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
                 {t("homepage.provide.heading2")}
               </h5>
@@ -69,13 +55,7 @@ export const Tamplate = () => {
           </Card>
           <Card className="max-w-sm">
             <div className="flex flex-col items-center pb-10">
-              <img
-                alt="citizen-tamplate"
-                height="96"
-                src={privateCompany}
-                width="96"
-                className="mb-3"
-              />
+              <img alt="citizen-tamplate" height="96" src={privateCompany} width="96" className="mb-3" />
               <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
                 {t("homepage.provide.heading3")}
               </h5>

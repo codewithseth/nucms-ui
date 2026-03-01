@@ -7,7 +7,10 @@ export function BannerComponent({ bgImg, context, link, linkContext }) {
   return (
     <Banner>
       <div className="flex w-full justify-between bg-gray-50 dark:border-gray-600 dark:bg-gray-700">
-        <section class="ad-banner rounded-md bg-center bg-no-repeat bg-gray-300 bg-blend-multiply bg-fill" style={{ backgroundImage: `url(${bgImg})` }}>
+        <section
+          class="ad-banner rounded-md bg-center bg-no-repeat bg-gray-300 bg-blend-multiply bg-fill"
+          style={{ backgroundImage: `url(${bgImg})` }}
+        >
           <div className="mx-auto flex items-center justify-start h-full">
             <p className="flex items-center text-sm font-bold text-gray-900 dark:text-gray-400 px-8">
               {/* <span className="mr-3 inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 p-1 dark:bg-gray-600">
