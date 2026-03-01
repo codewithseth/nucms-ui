@@ -1,0 +1,118 @@
+{
+  "homepage": {
+    "herosection": {
+      "heading1": "Create Your Website",
+      "heading2": "With Ease",
+      "headingxs": "Create Your Website With Ease",
+      "description": "We're aiming to make your idea into an actual piece by transform your concept into a tangible creation.",
+      "button": "Get Started"
+    },
+    "responsive": {
+      "heading": "Responsive",
+      "description": "Website is designed to be fully responsive, ensuring an optimal viewing experience across all devices, from desktops to smartphones"
+    },
+    "provide": {
+      "heading": "What do we have?",
+      "heading1": "Template",
+      "desc1": "Well designed templates are waiting for you ahead",
+      "heading2": "Take Control",
+      "desc2": "Every Evolution of Your Website Is Managed by You!",
+      "heading3": "Effective Migrations",
+      "desc3": "WYSWYG principle for your future website",
+      "button": "Start Now"
+    },
+    "interface": {
+      "heading": "Minimalist & Interactive",
+      "button": "Demo"
+    }
+  },
+  "overview": {
+    "herosection": {
+      "heading1": "Everything",
+      "heading2": "Effortlessly",
+      "description": "Whatever You Need, Whatever You Aim to Achieve—Timouy.com Has the Feature for You!",
+      "button": "Stat Building"
+    },
+    "guideline": {
+      "heading": "Guideline",
+      "heading1": "Template",
+      "desc1": "Choose one of our template",
+      "heading2": "Manage Content",
+      "desc2": "Create, update and delete your contents by yourself",
+      "heading3": "Publish",
+      "desc3": "Publish your content to your website"
+    },
+    "feature": {
+      "heading": "Our Features",
+      "heading1": "Reliability",
+      "desc1": "24/7 Expert Support Whenever you're stuck, whatever you're trying to make happen—our joyful Engineers have the answers on hand",
+      "heading2": "Security",
+      "desc2": "Account Security Tools Keep your user accounts secure with our built-in two-factor authentication and compromised password scanning",
+      "heading3": "Site Managemen",
+      "desc3": "Easily manage content in your website",
+      "button": "Learn More"
+    }
+  },
+  "aboutus": {
+    "herosection": {
+      "heading": "TIMOUY",
+      "description": "Get to know us here and bringing your idea to life, transforming it into reality and empowering creation through Timouy"
+    },
+    "core": {
+      "heading": "Our Core",
+      "heading1": "Your Idea",
+      "desc1": "Breaking Down Barriers for Ideas and Software: Empowering Expression and Encouraging Creativity",
+      "heading2": "Support Service",
+      "desc2": "Beyond a Service, Embracing a Culture of Customer Happiness: Genuine Support from Authentic Human Connections",
+      "heading3": "Ownership",
+      "desc3": "Empowering Your Digital Journey: Unleash Your Creativity, Customize Your Site, and Retain Ownership of Your Content and Data",
+      "heading4": "Easy Curver",
+      "desc4": "Fostering Your Online Journey of Progression with Intuitive Design and Building Tools, Secure Hosting Solutions"
+    },
+    "team": {
+      "heading": "Our Team",
+      "team1": "Sek Piseth",
+      "team2": "Pos Panha",
+      "team3": "Tea Longsan",
+      "team4": "Vandy Sereyrithy"
+    },
+    "contact": {
+      "heading": "GET IN TOUCH",
+      "desc": "Empowering Creativity and Innovation with our platform"
+    }
+  },
+  "language": {
+    "english": "English",
+    "khmer": "Khmer"
+  },
+  "navbar": {
+    "home": "Home",
+    "overview": "Overview",
+    "documentation": "Documentation",
+    "aboutus": "About Us",
+    "signin": "Sign In",
+    "signup": "Sign Up"
+  },
+  "footer": {
+    "heading": "TIMOUY",
+    "overview": {
+      "heading": "OVERVIEW",
+      "guideline": "Guideline",
+      "userdashboard": "Dashboard",
+      "feature": "Feature"
+    },
+    "about": {
+      "heading": "About US",
+      "core": "Our Core",
+      "team": "Our Team",
+      "contact": "Contact Us"
+    },
+    "followus": {
+      "heading": "FOLLOW US",
+      "gitlab": "Gitlab",
+      "facebook": "Facebook",
+      "linkin": "LinkIn"
+    },
+    "copyright": "TIMOUY. All rights reserved."
+  }
+}
