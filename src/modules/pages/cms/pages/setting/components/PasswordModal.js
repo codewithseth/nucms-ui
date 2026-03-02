@@ -3,7 +3,6 @@ import { Button } from "flowbite-react";
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
 import useUser from "../../users/core/action";
-import { useNavigate } from "react-router-dom";
 import InputPassword from "../../../../../../_timouy/helpers/form/InputPassword";
 
 const UpdatePassword = ({ id }) => {
@@ -14,7 +13,6 @@ const UpdatePassword = ({ id }) => {
   };
 
   const { changeUserPassword } = useUser();
-  const navigate = useNavigate();
 
   const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
   // min 5 characters, 1 upper case letter, 1 lower case letter, 1 numeric digit.
