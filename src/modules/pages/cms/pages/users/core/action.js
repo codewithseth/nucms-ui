@@ -32,10 +32,9 @@ const useUser = () => {
   const changeUserPassword = async (id, payload) => {
     try {
       await changePassword(id, payload);
-      toast.success("Password updated successfully");
+      toast.success("Password changed successfully!");
     } catch (error) {
-      console.error("Error updating user:", error);
-      toast.error("Error updating user");
+      toast.error("Current password is incorrect. Please try again.");
     }
   };
 

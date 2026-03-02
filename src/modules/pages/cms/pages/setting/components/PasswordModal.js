@@ -40,11 +40,11 @@ const UpdatePassword = ({ id }) => {
       await changeUserPassword(id, user);
       // handleClose();
       resetForm();
-      localStorage.removeItem("token");
-      navigate("/login");
-      window.location.reload();
+      // localStorage.removeItem("token");
+      // navigate("/login");
+      // window.location.reload();
     } catch (error) {
-      console.error("Error creating user:", error);
+      console.error("Current password is incorrect. Please try again.", error);
     } finally {
       setSubmitting(false);
     }
