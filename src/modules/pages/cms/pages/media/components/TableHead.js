@@ -7,10 +7,10 @@ const TableHead = ({ handleOpenModal }) => {
       <Table.HeadCell>Media</Table.HeadCell>
       <Table.HeadCell className="text-right">
         <button
-          className="bg-primary text-white font-semibold text-[13px] py-3 px-4 border border-gray-400 rounded-lg shadow"
+          className="bg-primary text-white w-28 font-semibold text-[13px] py-3 px-2 border border-gray-400 rounded-lg shadow"
           onClick={handleOpenModal}
         >
-          Image
+          Upload Image
         </button>
       </Table.HeadCell>
     </Table.Head>

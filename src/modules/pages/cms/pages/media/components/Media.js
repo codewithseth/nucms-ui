@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Table } from "flowbite-react";
 import TableBody from "../../media/components/TableBody";
 import TableHead from "../../media/components/TableHead";
@@ -31,14 +30,6 @@ export const Media = () => {
         <div className="mb-5">
           <h1 className="font-semibold">Media</h1>
           <h1>Manage all the media on your site, including images, video, and more.</h1>
-        </div>
-        <div className=" p-4 bg-gray-50 mt-5 mb-2">
-          <div className="flex justify-between items-center">
-            <Link>All</Link>
-            <Link>Images</Link>
-            <Link>Videos</Link>
-            <div></div>
-          </div>
         </div>
 
         <Table>

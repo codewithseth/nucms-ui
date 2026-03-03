@@ -2,8 +2,8 @@ import { Table } from "flowbite-react";
 import { useEffect, useState } from "react";
 import TableHead from "./TableHead";
 import useMedia from "../../media/core/action";
-import UploadImageModal from "../../media/components/UploadImageModal";
 import UploadSliderModal from "./UploadSliderModal";
+import TableBody from "./TableBody";
 
 export const Slider = () => {
   const { getImages } = useMedia();
@@ -33,7 +33,7 @@ export const Slider = () => {
         </div>
         <Table>
           <TableHead handleOpenModal={() => toggleModal("showModal")} />
-          {/* <TableBody /> */}
+          <TableBody />
         </Table>
       </div>
       <UploadSliderModal
