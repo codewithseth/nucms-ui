@@ -26,7 +26,6 @@ const Login = () => {
   const validationSchema = Yup.object().shape({
     username: Yup.string().email("Invalid email").required("The email field is required."),
     password: Yup.string()
-      .min(5, "Password is too short - should be 5 chars minimum.")
       .required("The password field is required."),
   });
 

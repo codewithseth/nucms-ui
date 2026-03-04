@@ -110,9 +110,8 @@ export const SideBar = () => {
             <li>
               <Link
                 to="/user-dashboard"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group ${
-                  isActive("/user-dashboard") ? "active-link" : ""
-                }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group ${isActive("/user-dashboard") ? "active-link" : ""
+                  }`}
               >
                 <Home />
                 <span className="ms-3">My Home</span>
@@ -120,21 +119,9 @@ export const SideBar = () => {
             </li>
             <li>
               <Link
-                to="/user-dashboard/post"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${
-                  isActive("/user-dashboard/post") ? "active-link" : ""
-                }`}
-              >
-                <Post />
-                <span className="flex-1 ms-3 whitespace-nowrap">Post</span>
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/user-dashboard/category"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group ${
-                  isActive("/user-dashboard/category") ? "active-link" : ""
-                }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group ${isActive("/user-dashboard/category") ? "active-link" : ""
+                  }`}
               >
                 <Category />
                 <span className="flex-1 ms-3 whitespace-nowrap">Category</span>
@@ -142,10 +129,19 @@ export const SideBar = () => {
             </li>
             <li>
               <Link
+                to="/user-dashboard/post"
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/post") ? "active-link" : ""
+                  }`}
+              >
+                <Post />
+                <span className="flex-1 ms-3 whitespace-nowrap">Post</span>
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/user-dashboard/media"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${
-                  isActive("/user-dashboard/media") ? "active-link" : ""
-                }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/media") ? "active-link" : ""
+                  }`}
               >
                 <Media />
                 <span className="flex-1 ms-3 whitespace-nowrap">Media</span>
@@ -154,9 +150,8 @@ export const SideBar = () => {
             <li>
               <Link
                 to="/user-dashboard/slider"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${
-                  isActive("/user-dashboard/slider") ? "active-link" : ""
-                }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/slider") ? "active-link" : ""
+                  }`}
               >
                 <Slider />
                 <span className="flex-1 ms-3 whitespace-nowrap">Slider</span>
@@ -165,9 +160,8 @@ export const SideBar = () => {
             <li>
               <Link
                 to="/user-dashboard/template"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${
-                  isActive("/user-dashboard/template") ? "active-link" : ""
-                }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/template") ? "active-link" : ""
+                  }`}
               >
                 <Appearance />
                 <span className="flex-1 ms-3 whitespace-nowrap">Template</span>
@@ -176,9 +170,8 @@ export const SideBar = () => {
             <li>
               <Link
                 to="/user-dashboard/comment"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${
-                  isActive("/user-dashboard/comment") ? "active-link" : ""
-                }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/comment") ? "active-link" : ""
+                  }`}
               >
                 <Comment />
                 <span className="flex-1 ms-3 whitespace-nowrap">Comment</span>
@@ -187,9 +180,8 @@ export const SideBar = () => {
             <li>
               <NavLink
                 to="/user-dashboard/setting/contact-setting"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group ${
-                  isBasePathActive ? "active-link" : ""
-                }`}
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group ${isBasePathActive ? "active-link" : ""
+                  }`}
               >
                 <Setting />
                 <span className="flex-1 ms-3 whitespace-nowrap">Setting</span>

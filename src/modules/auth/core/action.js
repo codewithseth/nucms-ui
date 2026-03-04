@@ -82,8 +82,8 @@ const useAuth = () => {
           localStorage.removeItem("registeredPassword");
 
           handleLoading(false);
-          toast.success("Email has been successfully verified! Welcome to Timouy!");
-          navigate("/dashboard"); // Navigate directly to dashboard
+          toast.success("Email has been successfully verified! Welcome to Timouy");
+          navigate("/user-dashboard"); // Navigate directly to dashboard
         } catch (loginErr) {
           // If auto-login fails, redirect to login page
           localStorage.removeItem("registeredEmail");

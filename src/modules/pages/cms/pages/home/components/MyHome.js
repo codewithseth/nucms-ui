@@ -20,21 +20,21 @@ export const MyHome = () => {
     <div className="cms-myhome">
       <div className="w-full flex gap-12 ">
         <div className="w-full">
-          <StatCard label="Visitors" value={totalData.numberOfVisitor || 0} />
+          <StatCard label="Total Visitors" value={totalData.numberOfVisitor || 0} />
+        </div>
+        <div className="w-full">
+          <Link to="/user-dashboard/category">
+            <StatCard label="Total Categories" value={totalData.totalCategory || 0} />
+          </Link>
         </div>
         <div className="w-full">
           <Link to="/user-dashboard/post">
-            <StatCard label="Posts" value={totalData.totalPost || 0} />
+            <StatCard label="Total Posts" value={totalData.totalPost || 0} />
           </Link>
         </div>
         <div className="w-full">
           <Link to="/user-dashboard/media">
-            <StatCard label="Media" value={totalData.totalMedia || 0} />
-          </Link>
-        </div>
-        <div className="w-full">
-          <Link to="/user-dashboard/category">
-            <StatCard label="Categories" value={totalData.totalCategory || 0} />
+            <StatCard label="Total Media" value={totalData.totalMedia || 0} />
           </Link>
         </div>
       </div>
