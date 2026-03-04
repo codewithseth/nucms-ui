@@ -98,7 +98,7 @@ const TableBody = () => {
                     <div className="absolute bottom-1 -right-9 transform -translate-x-1/2 z-10">
                       <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-primary to-teal-950 text-white shadow-lg">
                         <Slide className="w-3 h-3 mr-1 fill-current" />
-                        Slide
+                        Slider
                       </span>
                     </div>
                   )}
