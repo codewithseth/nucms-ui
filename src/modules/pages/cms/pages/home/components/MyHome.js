@@ -30,12 +30,12 @@ export const MyHome = () => {
           </Link>
         </div>
         <div className="w-full">
+          <StatCard label="Total Comments" value={0} />
+        </div>
+        <div className="w-full">
           <Link to="/user-dashboard/media">
             <StatCard label="Total Media" value={totalData.totalMedia || 0} />
           </Link>
-        </div>
-        <div className="w-full">
-          <StatCard label="Total Comments" value={0} />
         </div>
       </div>
       <div className="w-full flex gap-12 ">
