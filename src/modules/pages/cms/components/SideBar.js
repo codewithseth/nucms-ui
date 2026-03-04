@@ -139,6 +139,16 @@ export const SideBar = () => {
             </li>
             <li>
               <Link
+                to="/user-dashboard/comment"
+                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/comment") ? "active-link" : ""
+                  }`}
+              >
+                <Comment />
+                <span className="flex-1 ms-3 whitespace-nowrap">Comment</span>
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/user-dashboard/media"
                 className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/media") ? "active-link" : ""
                   }`}
@@ -165,16 +175,6 @@ export const SideBar = () => {
               >
                 <Appearance />
                 <span className="flex-1 ms-3 whitespace-nowrap">Template</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/user-dashboard/comment"
-                className={`menu-sidebar flex items-center p-2 text-gray-900 rounded-lg dark:text-white  dark:hover:bg-gray-700 group ${isActive("/user-dashboard/comment") ? "active-link" : ""
-                  }`}
-              >
-                <Comment />
-                <span className="flex-1 ms-3 whitespace-nowrap">Comment</span>
               </Link>
             </li>
             <li>
