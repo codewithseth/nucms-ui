@@ -42,6 +42,8 @@ const TableBody = () => {
       if (selectedSlide) {
         await reqAddSlideShow(selectedSlide);
         toast.success(`Image added to slideshow successfully.`);
+        // Refresh images to show updated slider status
+        getImages();
       }
     } catch (error) {
       toast.error(`Failed to add image to slideshow with ID: ${selectedSlide}`, error);
@@ -90,17 +92,29 @@ const TableBody = () => {
                     alt={`-_- ${index + 1}`}
                     className="w-full h-full rounded-md object-cover"
                   />
+
+                  {/* Slide Badge - Overlay on image */}
+                  {image.isSlider && (
+                    <div className="absolute bottom-1 -right-9 transform -translate-x-1/2 z-10">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-primary to-teal-950 text-white shadow-lg">
+                        <Slide className="w-3 h-3 mr-1 fill-current" />
+                        Slide
+                      </span>
+                    </div>
+                  )}
+
                   {/* Delete Button */}
                   <button
                     onClick={() => handleDelete(image.fileName)}
-                    className="absolute top-2 right-2 bg-white text-white p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="absolute top-2 right-2 bg-white text-white p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10"
                   >
                     <Delete />
                   </button>
+
                   {/* Add to Slideshow Button */}
                   <button
                     onClick={() => handleSetSlideShow(image.id)}
-                    className="absolute top-2 left-2 bg-white p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="absolute top-2 left-2 bg-white p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10"
                   >
                     <Slide />
                   </button>
