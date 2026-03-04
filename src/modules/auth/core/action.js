@@ -35,6 +35,7 @@ const useAuth = () => {
         dispatch(setToken(data.token));
         dispatch(setUser(data.userInfo));
         handleLoading(false);
+        navigate("/user-dashboard"); // Redirect to dashboard after login
       })
       .catch((err) => {
         handleError(setLoginError, err.response.data.message);
@@ -48,6 +49,7 @@ const useAuth = () => {
     try {
       const res = await reqRegister(payload);
       localStorage.setItem("registeredEmail", res.data.data.email);
+      localStorage.setItem("registeredPassword", payload.password); // Store password temporarily for auto-login
       dispatch(setCanAccessVerifyEmail(true));
       navigate("/verify-email");
       toast.success("OTP Code has been sent!");
@@ -63,13 +65,33 @@ const useAuth = () => {
 
   const OnCodeVerify = (values) => {
     const email = localStorage.getItem("registeredEmail");
+    const password = localStorage.getItem("registeredPassword"); // Get stored password
     handleLoading(true);
+
     reqCodeVerify(email, values.verifiedCode)
-      .then(() => {
-        handleLoading(false);
-        localStorage.removeItem("registeredEmail");
-        toast.success("Email has been successfully verified!");
-        navigate("/login");
+      .then(async () => {
+        // After successful verification, auto-login
+        try {
+          const loginRes = await reqLogin({ username: email, password });
+          const data = loginRes.data.data;
+          dispatch(setToken(data.token));
+          dispatch(setUser(data.userInfo));
+
+          // Clean up
+          localStorage.removeItem("registeredEmail");
+          localStorage.removeItem("registeredPassword");
+
+          handleLoading(false);
+          toast.success("Email has been successfully verified! Welcome to Timouy!");
+          navigate("/dashboard"); // Navigate directly to dashboard
+        } catch (loginErr) {
+          // If auto-login fails, redirect to login page
+          localStorage.removeItem("registeredEmail");
+          localStorage.removeItem("registeredPassword");
+          handleLoading(false);
+          toast.success("Email verified! Please login now.");
+          navigate("/login");
+        }
       })
       .catch(() => {
         handleLoading(false);

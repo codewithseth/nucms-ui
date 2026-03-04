@@ -4,7 +4,6 @@ import React from "react";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
 import { ReactComponent as Loading } from "../../../_timouy/assets/svg/loading.svg";
-import { ReactComponent as Google } from "../../../_timouy/assets/svg/google.svg";
 import InputForm from "../../../_timouy/helpers/form/InputForm";
 import InputPassword from "../../../_timouy/helpers/form/InputPassword";
 import { useSelector, useDispatch } from "react-redux";
