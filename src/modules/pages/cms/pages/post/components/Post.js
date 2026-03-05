@@ -62,6 +62,7 @@ export const Post = () => {
       <p>Create, edit, and manage the posts on your site.</p>
 
       <div className="flex justify-between items-center p-4 bg-gray-50 mt-5 mb-2">
+        <CustomSearch placeholder="Search title" params={params} onChange={(e) => handleSearch(e.target.value)} />
         <div className="flex items-center space-x-4">
           <DatePicker
             selected={startDate}
@@ -81,7 +82,6 @@ export const Post = () => {
             className="border border-gray-300 rounded-md p-2"
           />
         </div>
-        <CustomSearch placeholder="Search title" params={params} onChange={(e) => handleSearch(e.target.value)} />
       </div>
       <div className="overflow-x-auto">
         <Table className="min-w-full divide-y divide-gray-200">
