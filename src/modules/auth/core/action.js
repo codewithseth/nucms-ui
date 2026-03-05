@@ -49,13 +49,18 @@ const useAuth = () => {
     try {
       const res = await reqRegister(payload);
       localStorage.setItem("registeredEmail", res.data.data.email);
-      localStorage.setItem("registeredPassword", payload.password); // Store password temporarily for auto-login
+      localStorage.setItem("registeredPassword", payload.password);
       dispatch(setCanAccessVerifyEmail(true));
       navigate("/verify-email");
       toast.success("OTP Code has been sent!");
       await reqEmailVerify(res.data.data.email);
     } catch (err) {
-      const errorMessage = err.response?.status === 409 ? "This email is already in use" : "Registration failed";
+      const isNetworkError = !err.response;
+      const errorMessage = isNetworkError
+        ? "Service is unavailable. Please try again later."
+        : err.response?.data?.message ||
+        err.response?.data?.error ||
+        "Internal Server Error";
       handleError(setRegisterError, errorMessage);
       toast.error(errorMessage);
     } finally {
