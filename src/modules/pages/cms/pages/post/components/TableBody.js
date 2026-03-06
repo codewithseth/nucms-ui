@@ -27,7 +27,7 @@ const TableBody = ({ posts, handleEdit, handleDelete, url }) => (
             <Table.Cell className="flex justify-center sm:table-cell">
               <img src={post.image ? `${url}${post.image}` : NotFound} alt={post.title} className="w-20 rounded-md" />
             </Table.Cell>
-            <Table.Cell className="flex justify-end text-end gap-2 sm:table-cell">
+            <Table.Cell className="flex justify-end text-end space-x-1 sm:table-cell">
               <button onClick={() => handleEdit(post)}>
                 <Edit />
               </button>
