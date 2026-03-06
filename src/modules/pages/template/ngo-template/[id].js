@@ -40,7 +40,7 @@ const LatestNews = ({ title, author, authorImg, date, link, featureImage }) => {
 const Article = () => {
   useScrollToTop();
   const { catid, id } = useParams(); // Extract postID from the route params
-  const { posts, postsPub, loading } = useSelector((state) => state.post);
+  const { posts, postsPub } = useSelector((state) => state.post);
   const { user } = useSelector((state) => state.auth);
   const { getPosts, getPostsPub } = usePost();
 

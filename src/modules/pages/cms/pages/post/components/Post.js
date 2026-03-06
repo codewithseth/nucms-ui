@@ -48,6 +48,7 @@ export const Post = () => {
 
   useEffect(() => {
     getPosts();
+    // eslint-disable-next-line
   }, [params]);
 
   const filteredPosts = posts.filter((post) => {

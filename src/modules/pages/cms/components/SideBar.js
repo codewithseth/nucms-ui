@@ -26,6 +26,7 @@ export const SideBar = () => {
 
   useEffect(() => {
     getUserInfo();
+    // eslint-disable-next-line
   }, []);
 
   const isBasePathActive = location.pathname.startsWith("/user-dashboard/setting");
