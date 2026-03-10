@@ -30,7 +30,9 @@ export const MyHome = () => {
           </Link>
         </div>
         <div className="w-full">
-          <StatCard label="Total Comments" value={0} />
+          <Link to="/user-dashboard/comment">
+            <StatCard label="Total Comments" value={0} />
+          </Link>
         </div>
         <div className="w-full">
           <Link to="/user-dashboard/media">
