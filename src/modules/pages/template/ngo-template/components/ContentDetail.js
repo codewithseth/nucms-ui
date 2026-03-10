@@ -48,7 +48,7 @@ const ContentDetail = () => {
           </div>
         </div>
       ) : (
-        <div className="bg-white shadow-lg rounded-lg p-4 md:flex md:gap-4 mb-0">
+        <div className="bg-white border rounded-lg p-4 md:flex md:gap-4 mb-0">
           <img
             src={post?.author?.profileImage || no_avartar}
             alt="-_-"

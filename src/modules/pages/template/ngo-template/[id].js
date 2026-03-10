@@ -14,7 +14,7 @@ import moment from "moment";
 const LatestNews = ({ title, author, authorImg, date, link, featureImage }) => {
   return (
     <Link to={link ?? ""}>
-      <div className="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg group">
+      <div className="bg-white rounded-lg border overflow-hidden transition-shadow duration-300 hover:shadow-lg group">
         <div className="overflow-hidden">
           <img
             className="w-full h-48 object-cover transform transition-transform duration-300 group-hover:scale-105"

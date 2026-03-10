@@ -28,7 +28,7 @@ const reqFetchComments = async (postID) => {
 // Comment component
 const Comment = ({ author, date, text }) => {
   return (
-    <div className="p-2 bg-white rounded-lg shadow-md flex items-center space-x-4 mb-4">
+    <div className="p-2 bg-white rounded-lg border flex items-center space-x-4 mb-4">
       <img src={no_avatar} alt={author} className="w-12 h-12 rounded-full object-cover" />
       <div className="flex-1 ms-0">
         <div className="flex justify-between items-center">
